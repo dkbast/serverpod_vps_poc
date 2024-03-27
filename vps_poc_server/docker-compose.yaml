@@ -21,21 +21,12 @@ services:
       - REDIS_REPLICATION_MODE=master
 
   serverpod:
-    image: dart:stable
-    volumes:
-      - ./:/app
-      - serverpod_data:/app/data
-    working_dir: /app
-    command: dart /app/bin/main.dart
+    build:
+      context: ./
+      dockerfile: Dockerfile
     depends_on:
       - postgres
       - redis
-    environment:
-      POSTGRES_HOST: postgres
-      POSTGRES_DB: yourny_serverpod
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: 9Z55OVUlQrP8WyePn9PfL6j3x9G4lZwM
-      REDIS_URL: redis://:83KQnkmUN1oivO4KevaqFguqjbqT8UKA@redis:6379
 volumes:
   vps_poc_data:
   serverpod_data:

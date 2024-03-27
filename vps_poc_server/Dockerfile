@@ -12,7 +12,7 @@ RUN dart compile exe bin/main.dart -o bin/main
 # compatible with the dart image.
 FROM busybox:1.36.1-glibc
 
-ENV runmode=development
+ENV runmode=production
 ENV serverid=default
 ENV logging=normal
 ENV role=monolith
@@ -26,4 +26,4 @@ EXPOSE 8080
 EXPOSE 8081
 EXPOSE 8082
 
-CMD app/bin/main --mode $runmode --server-id $serverid --logging $logging --role $role
+CMD app/bin/main --mode $runmode --server-id $serverid --logging $logging --role $role --apply-migrations
