@@ -8,23 +8,29 @@
 apiServer:
   port: 8080
   publicHost: api.examplepod.com
-  publicPort: 443
-  publicScheme: https
+  # publicPort: 443
+  publicPort: 8080
+  # publicScheme: https
+  publicScheme: http
 
 # Configuration for the Insights server.
 insightsServer:
   port: 8081
   #publicHost: insights.examplepod.com
   publicHost: localhost
-  publicPort: 443
-  publicScheme: https
+  publicPort: 8081
+  # publicPort: 443
+  # publicScheme: https
+  publicScheme: http
 
 # Configuration for the web server.
 webServer:
   port: 8082
   publicHost: app.examplepod.com
-  publicPort: 443
-  publicScheme: https
+  # publicPort: 443
+  publicPort: 8082
+  # publicScheme: https
+  publicScheme: http
 
 # This is the database setup for your servers. The default for the Google Cloud
 # Engine Terraform configuration is to connect on a private IP address.
