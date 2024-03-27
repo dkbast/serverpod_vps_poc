@@ -21,6 +21,7 @@ COPY --from=build /runtime/ /
 COPY --from=build /app/bin/main /app/bin/main
 COPY --from=build /app/config/ config/
 COPY --from=build /app/web/ web/
+COPY --from=build /app/migrations/ migrations/
 
 EXPOSE 8080
 EXPOSE 8081
