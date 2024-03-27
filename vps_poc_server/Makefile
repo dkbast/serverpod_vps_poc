@@ -21,3 +21,5 @@ reset: ## reset the server
 	docker compose up --build --detach
 	dart run bin/main.dart --role maintenance --apply-migrations
 
+docker: ## build the docker image
+	docker build --no-cache . -t vps_poc:v1
