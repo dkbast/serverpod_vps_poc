@@ -20,5 +20,12 @@ services:
     environment:
       - REDIS_REPLICATION_MODE=master
 
+  serverpod:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    depends_on:
+      - postgres
+      - redis
 volumes:
   vps_poc_data:

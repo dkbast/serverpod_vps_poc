@@ -13,3 +13,12 @@ Then you can start the Serverpod server.
 When you are finished, you can shut down Serverpod with `Ctrl-C`, then stop Postgres and Redis.
 
     docker compose stop
+
+
+## Production Docker Compose
+
+run 
+```sh
+EXPORT POSTGRES_PASSWORD=y_w5CJuopUIySgb-YNLasJkirWfBooeO
+docker-compose up --build
+``` 

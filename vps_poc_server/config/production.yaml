@@ -14,7 +14,8 @@ apiServer:
 # Configuration for the Insights server.
 insightsServer:
   port: 8081
-  publicHost: insights.examplepod.com
+  #publicHost: insights.examplepod.com
+  publicHost: localhost
   publicPort: 443
   publicScheme: https
 
